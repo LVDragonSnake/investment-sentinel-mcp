@@ -1,0 +1,25 @@
+{
+  "name": "investment-sentinel-mcp",
+  "tools": [
+    {
+      "name": "finanzamille_digest",
+      "description": "Restituisce gli articoli del giorno da Finanzamille in JSON.",
+      "parameters": { "type": "object", "properties": { "limit": { "type": "integer", "default": 10 } } }
+    },
+    {
+      "name": "global_news_scan",
+      "description": "Scan macro/mercati (US_PM).",
+      "parameters": { "type": "object", "properties": { "region": { "type": "string", "default": "US_PM" }, "limit": { "type": "integer", "default": 10 } } }
+    },
+    {
+      "name": "portfolio_csv_import",
+      "description": "Importa posizioni da CSV/Drive e calcola P&L/drift.",
+      "parameters": { "type": "object", "properties": { "csv_url": { "type": "string" } }, "required": [] }
+    },
+    {
+      "name": "alpaca_bridge",
+      "description": "Ping Alpaca e (più avanti) quotes/positions.",
+      "parameters": { "type": "object", "properties": {} }
+    }
+  ]
+}
